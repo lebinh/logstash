@@ -30,13 +30,13 @@ class LogStash::Inputs::S3 < LogStash::Inputs::Base
   # The AWS region for your bucket.
   config :region, :validate => ["us-east-1", "us-west-1", "us-west-2",
                                 "eu-west-1", "ap-southeast-1", "ap-southeast-2",
-                                "ap-northeast-1", "sa-east-1", "us-gov-west-1"],
+                                "ap-northeast-1", "sa-east-1", "us-gov-west-1", "cn-north-1"],
                                 :deprecated => "'region' has been deprecated in favor of 'region_endpoint'"
 
   # The AWS region for your bucket.
   config :region_endpoint, :validate => ["us-east-1", "us-west-1", "us-west-2",
                                 "eu-west-1", "ap-southeast-1", "ap-southeast-2",
-                                "ap-northeast-1", "sa-east-1", "us-gov-west-1"], :default => "us-east-1"
+                                "ap-northeast-1", "sa-east-1", "us-gov-west-1", "cn-north-1"], :default => "us-east-1"
 
   # If specified, the prefix the filenames in the bucket must match (not a regexp)
   config :prefix, :validate => :string, :default => nil
